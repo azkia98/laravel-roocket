@@ -169,10 +169,13 @@ return [
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Roumen\Feed\FeedServiceProvider::class,
+        Roumen\Sitemap\SitemapServiceProvider::class,
         /*
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+                
 
         /*
          * Application Service Providers...
@@ -182,6 +185,7 @@ return [
          App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
 
     ],
 
@@ -241,6 +245,7 @@ return [
         'Twitter'   => Artesaos\SEOTools\Facades\TwitterCard::class,
         // or
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'Feed' => Roumen\Feed\Feed::class,
     ],
 
 ];

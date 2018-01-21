@@ -17,6 +17,8 @@
         "morilog/jalali": "^2.2",
         "predis/predis": "^1.1",
         "pusher/pusher-php-server": "^2.6",
+        "roumen/feed": "2.10.*",
+        "roumen/sitemap": "2.6.*",
         "uxweb/sweet-alert": "^1.4"
     },
     "require-dev": {

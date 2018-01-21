@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! SEO::generate() !!}
     {{--<title>وبسایت راکت</title>--}}
-
+    <link rel="alternate" type="application/xml+rss" href="/feed/article" title="فید مقالات سایت"/>
     <!-- Bootstrap Core CSS -->
     <link href="/css/home.css" rel="stylesheet">
 </head>

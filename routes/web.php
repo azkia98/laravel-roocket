@@ -18,6 +18,9 @@ Route::get('/articles/{articleSlug}' , 'ArticleController@single');
 Route::get('/courses/{courseSlug}' , 'CourseController@single');
 Route::post('/comment' , 'HomeController@comment');
 Route::get('/user/active/email/{token}' , 'UserController@activation')->name('activation.account');
+Route::get('/sitemap','SitemapController@index');
+Route::get('/sitemap-articles','SitemapController@articles');
+Route::get('/feed/article','FeedController@articles');
 
 Route::group(['middleware' => 'auth:web'] , function () {
    $this->post('/course/payment' , 'CourseController@payment');
