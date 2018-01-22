@@ -10,6 +10,7 @@
         "cviebrock/eloquent-sluggable": "^4.2",
         "guzzlehttp/guzzle": "^6.2",
         "intervention/image": "^2.3",
+        "irazasyed/telegram-bot-sdk": "^2.2",
         "laravel/framework": "5.4.*",
         "laravel/passport": "^2.0",
         "laravel/socialite": "^3.0",

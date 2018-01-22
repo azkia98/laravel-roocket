@@ -171,6 +171,7 @@ return [
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Roumen\Feed\FeedServiceProvider::class,
         Roumen\Sitemap\SitemapServiceProvider::class,
+        Telegram\Bot\Laravel\TelegramServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -246,6 +247,7 @@ return [
         // or
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
         'Feed' => Roumen\Feed\Feed::class,
+        'Telegram'  => Telegram\Bot\Laravel\Facades\Telegram::class
     ],
 
 ];

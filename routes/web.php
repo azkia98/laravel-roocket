@@ -21,6 +21,9 @@ Route::get('/user/active/email/{token}' , 'UserController@activation')->name('ac
 Route::get('/sitemap','SitemapController@index');
 Route::get('/sitemap-articles','SitemapController@articles');
 Route::get('/feed/article','FeedController@articles');
+Route::get('telegram','TelegramController@telegram');
+
+
 
 Route::group(['middleware' => 'auth:web'] , function () {
    $this->post('/course/payment' , 'CourseController@payment');
