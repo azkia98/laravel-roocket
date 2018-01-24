@@ -22,6 +22,7 @@ Route::get('/sitemap','SitemapController@index');
 Route::get('/sitemap-articles','SitemapController@articles');
 Route::get('/feed/article','FeedController@articles');
 Route::get('telegram','TelegramController@telegram');
+Route::post('/88905215:AAHwtR-_cZd16tcSn_-kKmP8kpM8L-Pik6o/webhook','TelegramController@webhook');
 
 
 

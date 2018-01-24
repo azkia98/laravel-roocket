@@ -12,6 +12,7 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        'admin/panel/upload-image'
+        'admin/panel/upload-image',
+        '/88905215:AAHwtR-_cZd16tcSn_-kKmP8kpM8L-Pik6o/webhook',
     ];
 }
