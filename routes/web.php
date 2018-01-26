@@ -29,6 +29,16 @@ Route::post('/88905215:AAHwtR-_cZd16tcSn_-kKmP8kpM8L-Pik6o/webhook','TelegramCon
 Route::group(['middleware' => 'auth:web'] , function () {
    $this->post('/course/payment' , 'CourseController@payment');
    $this->get('/course/payment/checker' , 'CourseController@checker');
+   
+   Route::prefix('/user/panel')->group(function(){
+      $this->get('/','UserPanelController@index')->name('user.panel');
+      $this->get('/history','UserPanelController@history')->name('user.panel.history');
+      $this->get('/vip','UserPanelController@vip')->name('user.panel.vip');
+      
+      $this->post('/payment','UserPanelController@payment')->name('user.panel.vip.payment');
+      $this->get('/checker','UserPanelController@checker')->name('user.panel.vip.checker');
+  
+   });
 });
 // namespace('Admin')->prefix('admin')
 Route::group(['namespace' => 'Admin' , 'middleware' => ['auth:web' , 'checkAdmin'], 'prefix' => 'admin'],function (){

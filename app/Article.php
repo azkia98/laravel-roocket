@@ -31,7 +31,8 @@ class Article extends Model
 
     public function path()
     {
-        return "/articles/$this->slug";
+        $local=app()->getLocale();
+        return "/{$local}/articles/$this->slug";
     }
 
     /**

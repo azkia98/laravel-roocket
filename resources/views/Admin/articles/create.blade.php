@@ -47,6 +47,15 @@
                 </div>
             </div>
             <div class="form-group">
+                <div class="col-sm-2">
+                    <label for="course_id" class="control-label">زبان</label>
+                    <select class="form-control" name="lang">
+                        <option value="fa" selected="">فارسی</option>
+                        <option value="en">english</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="col-sm-12">
                     <button type="submit" class="btn btn-danger">ارسال</button>
                 </div>

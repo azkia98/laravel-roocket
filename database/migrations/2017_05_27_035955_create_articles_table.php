@@ -19,6 +19,7 @@ class CreateArticlesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('title');
             $table->string('slug');
+            $table->string('lang')->default('fa');
             $table->text('description');
             $table->text('body');
             $table->text('images');

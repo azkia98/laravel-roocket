@@ -10,7 +10,7 @@ class SitemapController extends Controller {
         $sitemap = app()->make('sitemap');
         $sitemap->setCache('laravel.sitemap', 30);
         if (!$sitemap->isCached())
-            $sitemap->add(url('sitemap-articles'), '2012-08-25T20:10:00+02:00', '0.5', 'daily');
+            $sitemap->add(url('/fa/sitemap-articles'), '2012-08-25T20:10:00+02:00', '0.5', 'daily');
         return $sitemap->render();
     }
 
@@ -22,10 +22,10 @@ class SitemapController extends Controller {
 
             $articles = \App\Article::latest()->get();
             foreach ($articles as $article)
-                $sitemap->add(url($article->path()), '2012-08-25T20:10:00+02:00', '0.5', 'Weekly');
+                $sitemap->addSitemap(url($article->path()), '2012-08-25T20:10:00+02:00');
         }
 
-        return $sitemap->render();
+        return $sitemap->render('sitemapindex');
     }
 
 }

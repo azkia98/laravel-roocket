@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {!! SEO::generate() !!}
-    {{--<title>وبسایت راکت</title>--}}
+    
     <link rel="alternate" type="application/xml+rss" href="/feed/article" title="فید مقالات سایت"/>
     <!-- Bootstrap Core CSS -->
     <link href="/css/home.css" rel="stylesheet">
@@ -27,7 +27,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">وبسایت نجفیان</a>
+            <a class="navbar-brand" href="#">@lang('messages.title') @endlang</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

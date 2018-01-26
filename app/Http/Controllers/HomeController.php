@@ -10,19 +10,21 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
+
 class HomeController extends Controller
 {
     public function index()
     {
-
-        SEO::setTitle('وبسایت راکت');
+        $local=app()->getLocale();
+        cache()->flush();
+        SEO::setTitle(__('messages.title'));
         SEO::setDescription('وسایت آموزشی');
 
-        if(cache()->has('articles')) {
-            $articles = cache('articles');
+        if(cache()->has("articles|{$local}")) {
+            $articles = cache('articles|'.$local);
         } else {
-            $articles = Article::latest()->take(8)->get();
-            cache(['articles' => $articles] , Carbon::now()->addMinutes(10));
+            $articles = Article::whereLang($local)->latest()->take(8)->get();
+            cache(['articles|'.$local => $articles] , Carbon::now()->addMinutes(10));
         }
 
         if(cache()->has('courses')) {

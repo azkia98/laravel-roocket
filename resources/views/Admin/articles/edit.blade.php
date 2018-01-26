@@ -61,6 +61,11 @@
                     <input type="text" class="form-control" name="tags" id="tags" placeholder="تگ ها را وارد کنید" value="{{ $article->tags  }}">
                 </div>
             </div>
+            
+            <select class="form-control" name="lang">
+                        <option value="fa" {{ $article->lang == 'fa' ? 'selected':''}}>فارسی</option>
+                        <option value="en" {{ $article->lang == 'en' ? 'selected':''}}>english</option>
+                    </select>
             <div class="form-group">
                 <div class="col-sm-12">
                     <button type="submit" class="btn btn-danger">ویرایش</button>
